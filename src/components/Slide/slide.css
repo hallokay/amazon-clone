@@ -1,0 +1,93 @@
+.s-container {
+    position: relative;
+}
+
+.s-container .swiper {
+    width: 70%;
+    height: 12rem;
+    position: unset;
+    /* relative로 기준이 잡혀있어서 버튼나올때 swiper로 기준이 됨
+    그걸 상쇄시키고 바깥 컨테이너에 기준을 잡이줌 */
+}
+
+.s-container .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.s-container .swiper-button-prev,
+.s-container .swiper-button-next {
+  color: black;
+ }
+ 
+
+.s-container .swiper-button-prev {
+   left: 6rem;
+}
+
+.s-container .swiper-button-next {
+    right: 6rem;
+}
+
+.left-s {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 가격 */
+.left-s > :nth-child(2) {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* shop now btn */
+.left-s > :nth-child(3) {
+    width: max-content;
+    font-size: .6rem;
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+.name > :first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.name > :nth-child(2) {
+    font-size: .7rem;
+}
+
+.img-p {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    bottom: -20%;
+    transform: rotate(-20deg);
+}
+
+/* 태블릿일때  */
+@media(max-width: 856px) {
+    .s-container .swiper {
+        width: 90%;
+        height: 10rem;
+    }
+
+    .s-container .swiper-button-prev,
+    .s-container .swiper-button-next {
+        display: none;
+    }
+ }
